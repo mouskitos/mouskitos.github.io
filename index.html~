@@ -77,11 +77,9 @@ train_predict<-predict(trainFinal,predPCA_and_factors)
 confusionMatrix(train_predict,training$classe)
 
 
-##Step 7: In this step, we applied our model on the testing data set.
-We predict 20 out of the 20 cases.
+##Step 7:
 
 testing<-read.csv("pml_testing.csv", header=TRUE,na.strings=c("NA","#DIV/0!",""))
-
 classes<-sapply(testing,class)
 
 classes<-which(classes=="factor")
