@@ -1,9 +1,8 @@
 
-library(caret)
+##Due to problems in R I could not have the compiled HTML file describing my analysis.
+##Therefore I describe what my R code does in the prediction.
 
-library(Hmisc)
-
-##TO predict the classes for the test data set, i have used the following steps:
+##To predict the classes for the test data set, i have used the following steps:
 
 ###Step 1:Given the high number of variables, we decided to select variables 
 for preprocessing with principal component method to reduce the number of variables.
@@ -77,9 +76,11 @@ train_predict<-predict(trainFinal,predPCA_and_factors)
 confusionMatrix(train_predict,training$classe)
 
 
-##Step 7:
+##Step 7: In this step, we applied our model on the testing data set.
+We predict 20 out of the 20 cases.
 
 testing<-read.csv("pml_testing.csv", header=TRUE,na.strings=c("NA","#DIV/0!",""))
+
 classes<-sapply(testing,class)
 
 classes<-which(classes=="factor")
