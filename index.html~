@@ -1,6 +1,6 @@
 
 ##Due to problems in R I could not have the compiled HTML file describing my analysis.
-##Therefore I describe what my R code does in the prediction.
+##Therefore I describe here what my R code does in the prediction.
 
 ##To predict the classes for the test data set, i have used the following steps:
 
